@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+*{
+    font-family: 'Inter';
+    box-sizing: border-box;
+    margin: 0%;
+}
+
+.body-container{
+    max-width: 90%;/*ALTERAR FUTURAMENTE!!*/
+    margin: auto;
+    margin-top: 2%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4%; 
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    transform: translateX(0%);
+}
+nav a{
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: hsl(236, 13%, 42%);
+}
+#close-btn{
+    display: none;
+}
+#open-btn{
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+nav a:hover{
+    color:hsl(35, 77%, 62%);
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    gap:30px
+}
+.main-up{
+    display: flex;
+    gap:30px;
+    flex-direction: row;
+}
+main img{
+    width: 100%;
+    height: 100%;
+    grid-column: span 2; 
+    object-fit: cover;
+}
+article{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    
+}
+
+h1{
+    color: hsl(240, 100%, 5%);
+    font-size: 4rem;
+    font-weight: 800;
+}
+article p{
+    color:hsl(236, 13%, 42%);
+    font-size: 0.938rem;
+    font-weight: 400;
+    line-height: 1.5rem; 
+    margin-bottom: 5%;
+}
+article button{
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(36, 100%, 99%);
+    border: none;
+    font-size: 0.87rem;
+    font-weight: 700;
+    padding: 3% 6%;
+    letter-spacing: 4px;
+}
+article button:hover{
+    background-color:hsl(236, 13%, 42%);
+    color: hsl(36, 100%, 99%);
+    cursor: pointer;
+}
+
+
+aside{
+    min-width: 350px;
+    background-color: hsl(240, 100%, 5%);
+    padding: 3% 2% 0%;
+}
+h2{
+    color: hsl(35, 77%, 62%);
+    font-size: 2rem;
+    font-weight: 700;
+}
+h3 {
+    color:hsl(36, 100%, 99%);
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 1%;
+    cursor: pointer;
+}
+h3:hover {
+    color:hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+aside p{
+    color:hsl(236, 13%, 42%);
+    font-size: 0.938rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+aside div{
+    padding: 31px 0 29px 0;
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+aside div:last-child{
+    border: none;
+}
+
+
+footer{
+    display: grid;
+    grid-template-columns: 
+        repeat(auto-fill, minmax(340px, 1fr));
+    grid-gap: 3%;
+    margin-bottom: 30px;
+}
+.footer-card{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.footer-card img{
+    width: 80px;
+    height: 100px;
+    
+}
+.card h3{
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 12px;
+    color:hsl(236, 13%, 42%);
+}
+h4{
+    color:hsl(236, 13%, 42%);
+    font-size: 1.25rem;
+    font-weight: 400;
+}  
+h5{
+    color:hsl(240, 100%, 5%);
+    font-size: 1.25rem;
+    font-weight: 800; 
+}
+h5:hover{
+    color:hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+@media(max-width: 1900px){
+
+    footer{
+        grid-template-columns: 
+            repeat(auto-fill, minmax(500px, 1fr));
+        grid-gap: 5%;
+    }
+}
+@media(max-width:1070px){
+    h1{
+        line-height: 4rem;
+        font-size: 3.5rem
+    }
+}
+@media(max-width:800px){
+    .main-up{
+        flex-direction: column;
+    }
+    h1{
+        line-height: 3.5rem;
+        font-size: 3rem;
+    }
+}  
+@media(max-width:600px){
+    nav{
+        background-color:hsl(36, 100%, 99%);
+        min-height: 100%;
+        width: 50%;
+        flex-direction: column;
+        align-items: start;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding-top: 50%;
+        padding-left: 5%;
+        transform: translateX(100%);
+    }
+    
+    #open-btn{
+        display: block;
+    }
+    #close-btn{
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: fixed;
+        top: 4%;
+        right: 5%;
+    }
+    #overlay-menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color:hsl(240, 100%, 5%);
+        opacity: 0.5;
+        display: none;
+    }
+}
+@media(max-width: 500px){
+    article{
+        display: block;
+    }
+    article, aside, footer{
+        display: block;
+        min-width: 80%;
+    }
+}
+
+
+
+
